@@ -96,13 +96,13 @@ This is a local embedding model that produces 384-dimensional vectors.
 
 ### LLM
 
-The current implementation uses:
+The application uses Groq's hosted LLM API for answer generation.
 
-```text
-llama3.2:latest
-```
+The current model configured in `src/graph.py` is:
 
-through Ollama.
+`openai/gpt-oss-20b`
+
+The Groq API key is loaded securely from the `GROQ_API_KEY` environment variable.
 
 ### Note about OpenAI Embeddings
 

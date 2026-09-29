@@ -4,7 +4,7 @@ from typing import TypedDict
 from dotenv import load_dotenv
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_pinecone import PineconeVectorStore
-from langchain_ollama import ChatOllama
+from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph, START, END
 
 load_dotenv()
@@ -28,8 +28,8 @@ vector_store = PineconeVectorStore(
     embedding=embeddings
 )
 
-llm = ChatOllama(
-    model="llama3.2:latest",
+llm = ChatGroq(
+    model="openai/gpt-oss-20b",
     temperature=0
 )
 
